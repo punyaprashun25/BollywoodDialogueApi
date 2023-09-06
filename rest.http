@@ -1,0 +1,29 @@
+###Getting a list of all products
+GET http://localhost:3000/dialogues
+
+###creating a product
+POST http://localhost:3000/dialogues
+Content-Type: application/json
+
+{
+    "Dialogue": "Pushpa, I Hate Tears…inhe Ponch Dalo",
+    "Movie": "Amar Prem",
+    "Year": "1972"
+}
+
+###GET a product by id
+GET http://localhost:3000/dialogues/64f8d32df6db801a523795fc
+
+###updating a product by id
+PATCH  http://localhost:3000/dialogues/64f8d32df6db801a523795fc
+Content-Type: application/json
+
+{
+    "Year":"2020"
+}
+
+###Deleting a product by id
+DELETE  http://localhost:3000/dialogues/64f8d2f20e476d9428f6a1db
+
+###404 route for error handling
+GET http://localhost:3000/abc
